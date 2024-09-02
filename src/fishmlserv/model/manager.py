@@ -8,9 +8,14 @@ def get_model_path():
 
     # 사용 fastapi main.py 에서 아래와 같이 사용
     # from fishmlserv.model.manager import get_model_path
+    #f = __file__ 
     f = os.path.abspath(__file__)
     dir_name = os.path.dirname(f)
-    model_path = os.path.json(dir_name, "model.pkl")
-
-    return model_path
     
+
+    #model_path = dir_name + "/" + "model.pkl"
+    model_path = os.path.join(dir_name, "model.pkl")
+    print(model_path)
+    return model_path
+
+get_model_path()
