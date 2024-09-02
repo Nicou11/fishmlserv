@@ -46,5 +46,12 @@ def fish(length: float, weight: float):
             }
 
 @app.get("/model_path")
-def model(length: float, weight: float):
-    return r 
+def fish2(length: float, weight: float):
+    with open(model, "rb") as p:
+        fish_model = pickle.load(p)
+    prediction = fish_model.predict([[length, weight]])
+
+    if prediction[0] == 1:
+        fish_class = "도미"
+    else:
+       fish_class = "빙어"
