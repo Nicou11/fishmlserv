@@ -5,7 +5,7 @@ FROM python:3.8
 WORKDIR /code
 
 #COPY . /code/
-COPY src/fishmlserv/main.py /code/
+COPY src/fishmlserv /code/
 
 #COPY ./requirements.txt /code/requirements.txt
 COPY requirements.txt /code/
