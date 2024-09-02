@@ -1,5 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
+from fishmlserv.model.manager import get_model_path
 
 app = FastAPI()
 
@@ -42,3 +43,9 @@ def fish(length: float, weight: float):
                 "length": length, 
                 "weight": weight
             }
+
+@app.get("/get_model_path")
+from fishmlserv.model.manager import get_model_path
+get_model_path = model
+def model(length: float, weight: float):
+
