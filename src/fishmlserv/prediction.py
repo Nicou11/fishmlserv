@@ -15,7 +15,22 @@ app = FastAPI()
     #return model_path
 
 def fish(length: float, weight: float):
-    ### 모델 불러오기
+    """
+    물고기의 길이(l)와 무게(w) 값을 기반으로 해당 물고기의 종류를 예측
+
+    Args:
+        l (float) : 물고기의 길이
+        w (float) : 물고기의 무게
+
+    Returns:
+        str : 예측된 물고기의 종류("도미" or "빙어")를 반환
+
+    how to use:
+    1.
+    2.
+    3.
+
+    """
     with open(get_model_path(), "rb") as f:
         fish_model = pickle.load(f)
 
@@ -26,8 +41,8 @@ def fish(length: float, weight: float):
     else:
         return "빙어"
 
-def main():
-    fire.Fire(fish)
+#def main():
+ #   fire.Fire(fish)
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+ #   main()
