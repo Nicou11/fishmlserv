@@ -11,8 +11,6 @@ def get_model_path():
     #f = __file__ 
     f = os.path.abspath(__file__)
     dir_name = os.path.dirname(f)
-    
-
     #model_path = dir_name + "/" + "model.pkl"
     model_path = os.path.join(dir_name, "model.pkl")
     return model_path

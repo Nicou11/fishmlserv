@@ -3,7 +3,6 @@ from fastapi import FastAPI
 from fishmlserv.model.manager import get_model_path
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
-import os
 
 app = FastAPI()
 
@@ -15,14 +14,16 @@ app = FastAPI()
 @app.get("/fish_prediction")
 def fish(length: float, weight: float):
     """
-    물고기의 길이(l)와 무게(w) 값을 기반으로 해당 물고기의 종류를 예측
+    물고기 종류 예측
 
+    물고기의 길이(l)와 무게(w) 값을 기반으로 해당 물고기의 종류를 예측.
+    
     Args:
-        l (float) : 물고기의 길이
-        w (float) : 물고기의 무게
+        length (float) : 물고기의 길이.
+        weight (float) : 물고기의 무게.
 
     Returns:
-        str : 예측된 물고기의 종류("도미" or "빙어")를 반환
+        str : 예측된 물고기의 종류("도미" or "빙어")를 반환.
 
     how to use:
     1.
