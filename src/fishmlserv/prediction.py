@@ -2,7 +2,6 @@ from typing import Union
 from fastapi import FastAPI
 from fishmlserv.model.manager import get_model_path
 from sklearn.neighbors import KNeighborsClassifier
-import fire
 import pickle
 import os
 
@@ -13,7 +12,7 @@ app = FastAPI()
   #  dir_name = os.path.dirname(f)
    # model_path = os.path.join(dir_name, "model.pkl")
     #return model_path
-
+@app.get("/fish_prediction")
 def fish(length: float, weight: float):
     """
     물고기의 길이(l)와 무게(w) 값을 기반으로 해당 물고기의 종류를 예측
