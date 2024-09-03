@@ -6,7 +6,7 @@ FROM python:3.8
 WORKDIR /code
 
 #COPY . /code/
-COPY src/fishmlserv/cli.py /code/
+COPY src/fishmlserv/model/cli.py /code/
 
 COPY ./requirements.txt /code/requirements.txt
 #COPY requirements.txt /code/
