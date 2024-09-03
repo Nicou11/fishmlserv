@@ -9,7 +9,7 @@ WORKDIR /code
 COPY src/fishmlserv/prediction.py /code/
 
 #COPY ./requirements.txt /code/requirements.txt
-#COPY requirements.txt /code/
+COPY requirements.txt /code/
 
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade git+https://github.com/Nicou11/fishmlserv.git@0.9/makecli
