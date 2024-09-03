@@ -11,6 +11,9 @@ requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 
+[project.scripts]
+get-model-path = "fishmlserv.model.manager:get_model_path"
+
 
 [tool.pdm]
 distribution = false
