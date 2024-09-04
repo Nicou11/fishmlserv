@@ -4,8 +4,10 @@ from src.fishmlserv.model.manager import get_model_path
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
 import os
+import sys
 
 app = FastAPI()
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
 @app.get("/")
 def read_root():
