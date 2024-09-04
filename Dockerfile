@@ -12,7 +12,7 @@ COPY src/fishmlserv/main.py /code/
 #COPY requirements.txt /code/
 
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-RUN pip install --no-cache-dir --upgrade git+https://github.com/Nicou11/fishmlserv.git@1.1.0/k
+RUN pip install --no-cache-dir --upgrade git+https://github.com/Nicou11/fishmlserv.git@1.1.1/k
 # 모델서빙만(의존성의 위 BASE image에서 모두 설치함)
 
 

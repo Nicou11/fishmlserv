@@ -4,12 +4,11 @@ from fishmlserv.model.manager import get_model_path
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
 import os
-import sys
 
 app = FastAPI()
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
-check = 0
+with open(get_model_path(), "rb") as f:
+    fish_model = pickle.load(f)
 
 @app.get("/")
 def read_root():
@@ -33,21 +32,8 @@ def fish(length: float, weight: float):
     From fish model
     ```
     """
-    global check
-    global fish_model
-    ### 모델 불러오기
-    if check == 0:
-        with open(get_model_path(), "rb") as f:
-            fish_model = pickle.load(f)
-            check = 1
-    #if kn.predict([[30, 600]])[0] == 1:
-     #   print('도미')
-    #else:
-     #   print('빙어')
-    #prediction = fish_model.predict([[length, weight]])
-
     prediction = fish_model.predict([[length, weight]])
-    #fish_class = "몰라"
+
     if prediction[0] == 1:
         fish_class = "도미"
     else:
