@@ -40,6 +40,7 @@ ID=debian
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
+
 # 다시 호스트OS (WSL)로 exit 
 root@32efbf0c0913:/code# exit
  
