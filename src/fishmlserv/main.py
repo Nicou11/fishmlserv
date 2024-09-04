@@ -32,11 +32,13 @@ def fish(length: float, weight: float):
     ```
     """
     ### 모델 불러오기
-    with open(get_model_path(), "rb") as f:
-        fish_model = pickle.load(f)
+    while True:
+        with open(get_model_path(), "rb") as f:
+            fish_model = pickle.load(f)
 
-    prediction = fish_model.predict([[length, weight]])
-    
+        prediction = fish_model.predict([[length, weight]])
+        if prediction is defined:
+            break
     #if kn.predict([[30, 600]])[0] == 1:
      #   print('도미')
     #else:
