@@ -6,13 +6,13 @@ import numpy as np
 fish_model = None
 kval = 50
 
-def get_model_path(k=5):
+def get_model_path():
     # from fishmlserv.model.manager import get_model_path
     #f = __file__ 
     f = os.path.abspath(__file__)
     dir_name = os.path.dirname(f)
     #model_path = dir_name + "/" + "model.pkl"
-    model_path = os.path.join(dir_name, f"fish_model_k{k}.pkl")
+    model_path = os.path.join(dir_name, f"model.pkl")
     return model_path
 
 def load_model(k=5):
