@@ -5,9 +5,11 @@ description = "Serving Machine Learning Model - using sklearn(KNeighborsClassifi
 authors = [
     {name = "Nicou11", email = "lyoungin1204@gmail.com"},
 ]
-dependencies = [ 
+dependencies = [
+    "uvicorn[standard]>=0.30.6",
+    "fastapi>=0.114.0",
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 
