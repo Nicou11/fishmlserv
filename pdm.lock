@@ -5,7 +5,7 @@
 groups = ["default", "note"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:e879d4f770e20a3fbd6ba4b448a4f16555809dad335d60e82907c23184549362"
+content_hash = "sha256:0464cb1b5b60b08d6ec6768fc6fedf0670a39952e55188d2a6935be3bf98a53d"
 
 [[metadata.targets]]
 requires_python = "==3.8.*"
@@ -1203,7 +1203,7 @@ name = "numpy"
 version = "1.24.4"
 requires_python = ">=3.8"
 summary = "Fundamental package for array computing in Python"
-groups = ["note"]
+groups = ["default", "note"]
 marker = "python_version == \"3.8\""
 files = [
     {file = "numpy-1.24.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:1452241c290f3e2a312c137a9999cdbf63f78864d63c79039bda65ee86943f61"},
