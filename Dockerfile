@@ -1,5 +1,5 @@
-FROM nicou11/fishmlserv:0.9.1
-#FROM python:3.8
+#FROM nicou11/fishmlserv:0.9.1
+FROM python:3.11
 #FROM python:3.8.19-slim-bullseye
 #FROM python:3.8.19-alpine3.20
 
