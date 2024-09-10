@@ -12,7 +12,7 @@ app = FastAPI()
    # model_path = os.path.join(dir_name, "model.pkl")
     #return model_path
 @app.get("/fish_prediction")
-def fish(length: float, weight: float):
+def knn_api(length: float, weight: float):
     """
     물고기 종류 예측
 
