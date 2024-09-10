@@ -6,7 +6,7 @@ FROM python:3.11
 WORKDIR /code
 
 #COPY . /code/
-COPY src/fishmlserv/main.py /code/
+COPY src/fishmlserv/knn.py /code/
 
 #COPY ./requirements.txt /code/requirements.txt
 #COPY requirements.txt /code/
@@ -16,5 +16,5 @@ RUN pip install --no-cache-dir --upgrade git+https://github.com/Nicou11/fishmlse
 # 모델서빙만(의존성의 위 BASE image에서 모두 설치함)
 
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "knn:app", "--host", "0.0.0.0", "--port", "8080"]
 # 모델 서빙을 위해 API 구동을 위한 FastAPI RUN
