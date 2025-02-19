@@ -25,10 +25,10 @@ $ sudo docker run -d --name fmlserv-040 -p 8877:8765 fishmlserv:0.4.0
 $ sudo docker ps
 ```
 
-# docker 컨테이너 안으로 접속
+## docker 컨테이너 안으로 접속
 $ sudo docker exec -it fml071 bash
 
-# docker 컨테이너 안에서
+## docker 컨테이너 안에서
 root@32efbf0c0913:/code# cat /etc/os-release
 
 PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
@@ -41,10 +41,10 @@ HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 
-# 다시 호스트OS (WSL)로 exit 
+## 다시 호스트OS (WSL)로 exit 
 root@32efbf0c0913:/code# exit
 
-# Log 확인
+## Log 확인
 $ sudo docker logs -f <CONTAINER NAME>
 
 # LB
