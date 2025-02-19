@@ -1,6 +1,5 @@
-# fishmlserv
-
-## fastapi Creating
+# fishmlserv 
+## KNN(K-Nearest Neighbor)알고리즘을 이용한 물고기 예측
 
 ### Deploy
 ![image](https://github.com/user-attachments/assets/a2665a21-109f-415b-a974-06495ce8d23d)
