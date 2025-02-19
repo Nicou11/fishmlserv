@@ -10,9 +10,9 @@ app = FastAPI()
 with open(get_model_path(), "rb") as f:
     fish_model = pickle.load(f)
 
-@app.get("/test")
+@app.get("/")
 def read_root():
-    return {"Test": "Done"}
+    return {"Hello": "World"}
 
 
 @app.get("/items/{item_id}")
